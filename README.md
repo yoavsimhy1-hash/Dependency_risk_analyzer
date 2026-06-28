@@ -19,6 +19,6 @@ Extracting dependency names and version information into a normalized internal f
 
 Currently supported manifest files:
 
-requirements.txt
-pyproject.toml
+requirements.txt,
+pyproject.toml,
 package.json
