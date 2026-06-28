@@ -4,9 +4,7 @@ Dependency Risk Analyzer
 
 Overview
 
-Dependency Risk Analyzer is a Python-based software supply chain security tool that analyzes a project's third-party dependencies and evaluates their potential risk.
-
-Unlike traditional Software Composition Analysis (SCA) tools that primarily focus on known vulnerabilities (CVEs), this project aims to assess broader supply chain risk indicators, such as package metadata, maintainer activity, repository health, release history, and other trust signals.
+a Python-based software supply chain security tool that analyzes a project's third-party dependencies and evaluates their potential risk.
 
 The goal is to provide a more complete picture of the security posture of a project's dependencies.
 
