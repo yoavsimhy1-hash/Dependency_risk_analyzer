@@ -38,15 +38,6 @@ Collected metadata currently includes:
 * License
 * Publication date (when available)
 
-Project Structure
-Dependency_risk_analyzer/
-│
-├── analyzer.py
-├── metadata_fetcher.py
-├── requirements_parser.py
-├── pyproject_parser.py
-├── package_json_parser.py
-└── README.md
 
 Example Workflow
 1. Parse dependency files.
