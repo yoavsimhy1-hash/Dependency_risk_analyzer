@@ -1,37 +1,64 @@
 Dependency Risk Analyzer
 
-🚧 Status: Under active development
+A Python-based tool that analyzes Python and JavaScript project dependencies and evaluates their potential security risk.
 
-Overview
+The project is being developed incrementally, with each stage adding new analysis capabilities. The goal is to build a practical dependency risk analyzer similar to those used in software supply chain security.
 
-a Python-based software supply chain security tool that analyzes a project's third-party dependencies and evaluates their potential risk.
+Project Status: 🚧 Under active development
 
-The goal is to provide a more complete picture of the security posture of a project's dependencies.
+Current Features
 
-Current Features 
+Stage 1 – Dependency Parsing ✅
+Extracts dependencies from common project files:
 
-Stage 1 – Dependency Discovery:
+* requirements.txt
+* pyproject.toml
+* package.json
 
-Recursively scanning a project directory for supported dependency manifests.
-Parsing Python and JavaScript dependency files.
-Extracting dependency names and version information into a normalized internal format.
+For each dependency, the parser collects:
+* Package name
+* Version constraint
+* Ecosystem (Python / JavaScript)
+* Dependency type
+* Source file
 
-Currently supported manifest files:
+Stage 2 – Package Metadata Collection ✅
+Retrieves package metadata from the official package registries.
 
-requirements.txt,
-pyproject.toml,
-package.json
+Python packages
+* PyPI JSON API
+JavaScript packages
+* npm Registry API
 
-Stage 2 - Package Metadata Fetching:
+Collected metadata currently includes:
+* Latest version
+* Package description
+* Homepage
+* Repository
+* License
+* Publication date (when available)
 
-The analyzer now enriches each discovered dependency with metadata retrieved directly from the official package registries.
-* Fetches package metadata from PyPI for Python packages.
-* Fetches package metadata from the npm Registry for JavaScript packages.
-* Automatically selects the correct registry based on the package ecosystem.
-* Handles network errors and missing packages gracefully.
-* Retrieves key package information, including:
-    * Latest available version
-    * Package description
-    * License
-    * Homepage
-    * Available published versions
+Project Structure
+Dependency_risk_analyzer/
+│
+├── analyzer.py
+├── metadata_fetcher.py
+├── requirements_parser.py
+├── pyproject_parser.py
+├── package_json_parser.py
+└── README.md
+
+Example Workflow
+1. Parse dependency files.
+2. Identify all project dependencies.
+3. Retrieve metadata from PyPI or npm.
+4. (Upcoming) Calculate a security risk score for each package.
+5. (Upcoming) Generate a detailed risk report.
+
+
+Motivation
+Modern applications depend on hundreds of third-party packages. This project is an opportunity to explore software supply chain security while building a practical security tool from scratch.
+The long-term goal is to identify potentially risky dependencies using package metadata, security heuristics, and other indicators that may suggest malicious or suspicious packages.
+
+Disclaimer
+This project is intended for educational and research purposes. It is currently under active development and should not yet be considered a production-ready security scanner.
