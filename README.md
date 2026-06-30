@@ -17,9 +17,8 @@ Extracts dependencies from common project files:
 
 For each dependency, the parser collects:
 * Package name
-* Version constraint
+* Version
 * Ecosystem (Python / JavaScript)
-* Dependency type
 * Source file
 
 Stage 2 – Package Metadata Collection ✅
@@ -34,9 +33,7 @@ Collected metadata currently includes:
 * Latest version
 * Package description
 * Homepage
-* Repository
 * License
-* Publication date (when available)
 
 
 Example Workflow
