@@ -2,6 +2,7 @@ from pathlib import Path
 from requirements_parser import parse_requirements_txt
 from pyproject_parser import parse_pyproject_toml
 from package_json_parser import parse_package_json
+from metadata_fetcher import fetch_metadata
 
 SUPPORTED_FILES = {
     "requirements.txt",
@@ -47,3 +48,8 @@ def analyze_project(project_path):
         all_dependencies.extend(dependencies)
 
     return all_dependencies
+
+dependencies = analyze_project(r"") #project path here
+for dependency in dependencies:
+    metadata = fetch_metadata(dependency)
+    print(metadata)
