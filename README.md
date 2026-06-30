@@ -45,8 +45,10 @@ Example Workflow
 
 
 Motivation
+
 Modern applications depend on hundreds of third-party packages. This project is an opportunity to explore software supply chain security while building a practical security tool from scratch.
 The long-term goal is to identify potentially risky dependencies using package metadata, security heuristics, and other indicators that may suggest malicious or suspicious packages.
 
 Disclaimer
+
 This project is intended for educational and research purposes. It is currently under active development and should not yet be considered a production-ready security scanner.
