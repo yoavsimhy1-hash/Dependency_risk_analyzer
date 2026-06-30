@@ -10,12 +10,10 @@ The goal is to provide a more complete picture of the security posture of a proj
 
 Current Features 
 
-Stage 1 – Dependency Discovery
-
-The current implementation supports:
+Stage 1 – Dependency Discovery:
 
 Recursively scanning a project directory for supported dependency manifests.
-Parsing Python and Node.js dependency files.
+Parsing Python and JavaScript dependency files.
 Extracting dependency names and version information into a normalized internal format.
 
 Currently supported manifest files:
@@ -24,7 +22,7 @@ requirements.txt,
 pyproject.toml,
 package.json
 
-Stage 2 - Package Metadata Fetching
+Stage 2 - Package Metadata Fetching:
 
 The analyzer now enriches each discovered dependency with metadata retrieved directly from the official package registries.
 * Fetches package metadata from PyPI for Python packages.
