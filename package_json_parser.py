@@ -14,7 +14,7 @@ def parse_package_json(file_path):
                 "name": name,
                 "version": version,
                 "operator": None,
-                "ecosystem": "npm",
+                "ecosystem": "javascript",
                 "dependency_type": section,
                 "source_file": str(file_path)
             })
