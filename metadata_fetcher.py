@@ -1,6 +1,7 @@
 import requests
 
-def fetch_pypi_metadata(package_name):
+#gets a pypi package name and returns its metadata
+def fetch_pypi_metadata(package_name): 
     url = f"https://pypi.org/pypi/{package_name}/json"
 
     try:
@@ -23,6 +24,7 @@ def fetch_pypi_metadata(package_name):
         "versions": list(data.get("releases", {}).keys())
     }
 
+#gets a npm package name and returns its metadata
 def fetch_npm_metadata(package_name):
     url = f"https://registry.npmjs.org/{package_name}"
 
@@ -46,6 +48,7 @@ def fetch_npm_metadata(package_name):
         "versions": list(data.get("versions", {}).keys())
     }
 
+#gets a dependency, checks whether its a python or a javascript one and calls the relevant function
 def fetch_metadata(dependency):
     ecosystem = dependency["ecosystem"]
     name = dependency["name"]
