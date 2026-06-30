@@ -9,6 +9,7 @@ a Python-based software supply chain security tool that analyzes a project's thi
 The goal is to provide a more complete picture of the security posture of a project's dependencies.
 
 Current Features 
+
 Stage 1 – Dependency Discovery
 
 The current implementation supports:
