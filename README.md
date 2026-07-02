@@ -35,12 +35,22 @@ Collected metadata currently includes:
 * Homepage
 * License
 
+Stage 3 – Basic Risk Analysis ✅
+* Calculate a risk score (0–100)
+* Evaluate basic package risk indicators:
+  * Very recent package release
+  * Small version history
+  * Single published version
+  * Missing homepage
+  * Missing description
+  * Missing license
+* Return an explanation for every triggered risk check
 
 Example Workflow
 1. Parse dependency files.
 2. Identify all project dependencies.
 3. Retrieve metadata from PyPI or npm.
-4. (Upcoming) Calculate a security risk score for each package.
+4. Calculate a security risk score for each package.
 5. (Upcoming) Generate a detailed risk report.
 
 
