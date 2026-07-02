@@ -1,5 +1,6 @@
 import json
 
+#gets a package.json file path and returns a list of dependencies
 def parse_package_json(file_path):
     dependencies = []
 
