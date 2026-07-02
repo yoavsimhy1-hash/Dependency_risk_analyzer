@@ -1,6 +1,6 @@
 import re
 
-#gets a dependency file path and returns a list of dependencies
+#gets a requirements.txt file path and returns a list of dependencies
 def parse_requirements_txt(file_path):
     dependencies = []
 
