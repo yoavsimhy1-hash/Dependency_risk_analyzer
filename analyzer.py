@@ -3,6 +3,7 @@ from requirements_parser import parse_requirements_txt
 from pyproject_parser import parse_pyproject_toml
 from package_json_parser import parse_package_json
 from metadata_fetcher import fetch_metadata
+from risk_checker import calculate_risk
 
 SUPPORTED_FILES = {
     "requirements.txt",
@@ -49,8 +50,10 @@ def analyze_project(project_path):
 
     return all_dependencies
 
+
 if __name__ == "__main__":
-    dependencies = analyze_project(r"C:\Users\simhy\PycharmProjects\Dependency_Risk_Analyzer\test_projects\express-master")
+    dependencies = analyze_project(r"") # your project path here
     for dependency in dependencies:
         metadata = fetch_metadata(dependency)
-        print(metadata)
+        risk_check = calculate_risk(metadata)
+        print(risk_check)
