@@ -1,6 +1,7 @@
 import re
 import tomllib
 
+#gets a pyproject.toml file path and returns a list of dependencies
 def parse_pyproject_toml(file_path):
     dependencies = []
 
