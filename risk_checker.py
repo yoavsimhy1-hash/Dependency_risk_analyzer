@@ -103,7 +103,17 @@ def calculate_risk(metadata):
             "check": "Latest Version",
             "reason": "Package is missing a latest version"
         })
-
+    
+    typosquatting_result = check_typosquatting(metadata)
+    # is there typosquatting?
+    if typosquatting_result is not None:
+        score += typosquatting_result["risk"]
+        checks.append({
+            "check": "Typosquatting",
+            "reason": typosquatting_result["reason"]
+        })
+     
+      
     if score > 100:
         score = 100
 

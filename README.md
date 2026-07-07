@@ -44,14 +44,29 @@ Stage 3 – Basic Risk Analysis ✅
   * Missing homepage
   * Missing description
   * Missing license
+  * Missing latest version
 * Return an explanation for every triggered risk check
+
+Stage 4 – Typosquatting Detection ✅
+* Detects possible typosquatting attempts in npm dependencies
+* Searches the npm registry for packages with similar names
+* Uses string similarity to compare dependency names
+* Checks whether a similar package has a much larger version history
+* Adds typosquatting-related risk to the final package risk score
+* Returns an explanation when a suspiciously similar package name is found
+
+Current typosquatting checks include:
+* Similar package name
+* Similar package name with a much larger version history
 
 Example Workflow
 1. Parse dependency files.
 2. Identify all project dependencies.
 3. Retrieve metadata from PyPI or npm.
 4. Calculate a security risk score for each package.
-5. (Upcoming) Generate a detailed risk report.
+5. Check npm dependencies for possible typosquatting indicators.
+6. Return triggered risk checks with explanations.
+7. (Upcoming) Generate a detailed risk report.
 
 
 Motivation
